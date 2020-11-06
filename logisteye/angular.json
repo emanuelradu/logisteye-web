@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "logisteye"
+    }
+  },
+  "defaultProject": "logisteye",
+  "cli": {
+    "analytics": "adbab649-2677-417d-905d-b007008f5af0"
+  }
 }
