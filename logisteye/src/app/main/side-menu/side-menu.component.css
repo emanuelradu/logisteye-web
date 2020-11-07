@@ -13,6 +13,11 @@
     width: 100%;
 }
 
+a{
+    text-decoration: none;
+    color:white;
+}
+
 .account{
     border-radius: 50%;
     display: flex;
@@ -49,6 +54,7 @@ li{
     text-decoration: none;
     list-style-type: none;
     padding: 10px 0px;
+    text-decoration: none;
 
 }
 
