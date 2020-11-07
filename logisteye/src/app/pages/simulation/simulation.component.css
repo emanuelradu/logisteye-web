@@ -2,24 +2,23 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100vh;
-    border: 3px solid blue;
+    height: 90vh;
     font-family: 'Montserrat', sans-serif;
     justify-content: space-between;
+    overflow: auto;
+    overflow-x: hidden;
 }
 
 .information-container{
     display: flex;
     flex-direction: row;
-    height: 50%;
+    height: 40%;
     width: 100%;
-    border: 3px solid red;
 }
 
 .parameters-container{
-    width: 75%;
+    width: 50%;
     display: inline-flexbox;
-    border: 3px solid black;
 }
 
 .parameter{
@@ -27,16 +26,14 @@
 }
 
 .results-container{
-    width: 25%;
+    width: 50%;
     display: flex;
     flex-direction: column;
-    border:3px solid purple;
 }
 
 .map-container{
     width: 100%;
-    height: 50%;
-    border: 3px solid orange;
+    height: 60%;
 }
 
 .mat-slider-thumb-label {
@@ -51,3 +48,11 @@
 .mat-slider-thumb-label-text {
     opacity: 1 !important;
 }
+
+.button {
+    display: table-cell;
+    font-size: 14px;
+    margin-left: 8px;
+    min-width: 120px;
+}
+

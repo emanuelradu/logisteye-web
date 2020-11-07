@@ -8,6 +8,7 @@ import { MatSliderModule } from '@angular/material/slider';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MapComponent } from './map/map.component';
 import { ConfigurationComponent } from './configuration/configuration.component';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 
 
@@ -17,6 +18,7 @@ import { ConfigurationComponent } from './configuration/configuration.component'
     CommonModule,
     BrowserModule,
     MatSliderModule,
+    MatCheckboxModule ,
     BrowserAnimationsModule,
   ],
   exports: [

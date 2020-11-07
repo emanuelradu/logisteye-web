@@ -5,6 +5,7 @@ import { MainModule } from './main/main.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { MatSliderModule } from '@angular/material/slider';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 import { AppComponent } from './app.component';
 import { MarkerService } from './_services/marker.service';
@@ -23,6 +24,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     PagesModule,
     AppRoutingModule,
     MatSliderModule,
+    MatCheckboxModule,
     BrowserAnimationsModule,
   ],
   providers: [
