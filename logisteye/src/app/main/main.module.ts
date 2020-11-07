@@ -7,7 +7,7 @@ import { SideMenuComponent } from './side-menu/side-menu.component';
 
 
 @NgModule({
-  declarations: [HeaderComponent, FooterComponent, SideMenuComponent],
+  declarations: [HeaderComponent, FooterComponent, SideMenuComponent, ],
   imports: [
     CommonModule
   ],
