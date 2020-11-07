@@ -7,9 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class SimulationComponent implements OnInit {
-
+  checked = false;
   constructor() { }
-
   ngOnInit(): void {
   }
 

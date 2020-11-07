@@ -5,6 +5,7 @@ import { MainModule } from './main/main.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { MatSliderModule } from '@angular/material/slider';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 import { AppComponent } from './app.component';
 import { MarkerService } from './_services/marker.service';
@@ -14,6 +15,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -26,10 +29,14 @@ import { MatSortModule } from '@angular/material/sort';
     PagesModule,
     AppRoutingModule,
     MatSliderModule,
+    MatCheckboxModule,
     BrowserAnimationsModule,
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
   ],
   providers: [
     MarkerService,
