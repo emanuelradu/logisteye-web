@@ -7,6 +7,7 @@ import { SimulationComponent } from './simulation/simulation.component';
 import { MatSliderModule } from '@angular/material/slider';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MapComponent } from './map/map.component';
+import { ConfigurationComponent } from './configuration/configuration.component';
 
 
 
@@ -21,8 +22,8 @@ import { MapComponent } from './map/map.component';
   exports: [
     LoginComponent,
     SimulationComponent,
-    MapComponent
-
+    MapComponent,
+    ConfigurationComponent,
   ]
 })
 export class PagesModule { }
