@@ -70,7 +70,7 @@ export class MarkerService {
             [c.corners[1].lat, c.corners[1].long],
             [c.corners[2].lat, c.corners[2].long],
             [c.corners[3].lat, c.corners[3].long]];
-          L.polygon(latlngs, {color: c.color}).addTo(map);
+          L.polygon(latlngs, {color: c.color, weight: 0.1}).addTo(map);
           }
         });
     }
