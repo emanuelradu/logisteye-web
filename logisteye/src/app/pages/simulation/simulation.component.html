@@ -7,33 +7,44 @@
                         <p class="mat-h3"><b>Select the number of lockers</b></p>
                         <mat-slider
                         thumbLabel
-                        tickInterval="1000"
+                        tickInterval="10"
                         min="1"
-                        max="100" color="black"></mat-slider>
+                        max="100" color="black"
+                        (change)="setNumberOfLockers($event)"></mat-slider>
                     </div>
                     <div class="parameter">
                         <p class="mat-h3"><b>Select the number of packages</b></p>
                         <mat-slider
                         thumbLabel
-                        tickInterval="1000"
+                        tickInterval="10"
                         min="1"
-                        max="100" color="black"></mat-slider>
+                        max="100" color="black"
+                        (change)="setNumberOfPackages($event)"></mat-slider>
                     </div>
                     <div class="parameter">
                         <p class="mat-h3"><b>Select the number of couriers</b></p>
                         <mat-slider
                         thumbLabel
-                        tickInterval="1000"
+                        tickInterval="10"
                         min="1"
-                        max="100" color="black"></mat-slider>
+                        max="100" color="black"
+                        (change)="setNumberOfCouriers($event)"></mat-slider>
                     </div>
                     <div class="button">
-                        <button mat-button color="accent"><b>Run simulation</b></button>
+                        <button mat-button color="accent"
+                        (click) = "sendSimulationRequest($event)"
+                        ><b>Run simulation</b></button>
                     </div>
                 </div>
             </div>
             
             <div class="results-container">
+                <div class = "time">
+                    <h1 class="mat-h1">Required time to deliver all the packages</h1>
+                </div>
+                <div class = "co2">
+                    <h1 class="mat-h1">Amount of CO2 emissions reduced</h1>
+                </div>
 
             </div>
 

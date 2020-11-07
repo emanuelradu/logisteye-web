@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MapComponent } from './map/map.component';
 import { ConfigurationComponent } from './configuration/configuration.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 
 
@@ -18,7 +19,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     CommonModule,
     BrowserModule,
     MatSliderModule,
-    MatCheckboxModule ,
+    MatCheckboxModule,
+    MatToolbarModule,
     BrowserAnimationsModule,
   ],
   exports: [

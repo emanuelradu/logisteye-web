@@ -1,6 +1,5 @@
 import { AfterViewInit, Component } from '@angular/core';
 import * as L from 'leaflet';
-import { icon, Marker } from 'leaflet';
 import {LatLng} from "leaflet";
 import { MarkerService } from 'src/app/_services/marker.service';
 
@@ -31,15 +30,13 @@ export class MapComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     this.initMap()
-    //this.markerService.makeCapitalMarkers(this.map);
-    this.markerService.makeCapitalCircleMarkers(this.map);
     this.markerService.makeLockers(this.map);
     this.markerService.makeHeatMap(this.map);
   }
 
   private initMap(): void {
     this.map = L.map('map', {
-      center: [ 48.8014, 2.1301 ],
+      center: [ 48.8566, 2.3522 ],
       zoom: 12
     });
 
