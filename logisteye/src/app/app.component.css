@@ -1,6 +1,8 @@
 .page{
     height: 100%;
     width: 60%;
+    margin-top: 1.5em;
+    margin-left: 2em;
 }
 
 .main-screen{
@@ -10,8 +12,7 @@
 }
 
 .side-menu{
-    width: 27%;
-
+    width: 26%;
 }
 
 
