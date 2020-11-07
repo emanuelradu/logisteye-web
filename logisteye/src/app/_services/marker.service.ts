@@ -9,7 +9,8 @@ import * as L from 'leaflet';
 export class MarkerService {
 
   capitals: string = 'assets/data/paris_heatmap.geojson';
-  
+  lockers: string = 'assets/data/lockers.json';
+  locker: string = 'assets/locker.svg';
 
   constructor(private http: HttpClient,
     private popupService: PopUpService) {
@@ -39,15 +40,25 @@ export class MarkerService {
           console.log(lat)
           const circle = L.circleMarker([lon, lat],
             {
-              radius: 10,
+              radius: 5,
               color: '#FF0000'
             }
         ).addTo(map);
-      circle.bindPopup(this.popupService.makeCapitalPopup(c));
+        circle.bindPopup(this.popupService.makeCapitalPopup(c));
 
-      circle.addTo(map);
-      }
-      console.log(map);
-      });
+        circle.addTo(map);
+        }
+        console.log(map);
+        });
+    }
+
+      makeLockers(map: L.map): void {
+        this.http.get(this.lockers).subscribe((res: any) => {
+          for (const c of res) {
+            const lat = c.lat;
+            const lon = c.long;
+            const addImage = L.imageOverlay(this.locker, [[lat, lon], [lat - 0.001, lon + 0.001]]).addTo(map);
+          }
+        });
+    }
   }
-}
