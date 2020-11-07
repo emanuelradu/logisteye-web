@@ -2,6 +2,7 @@ import { AfterViewInit, Component } from '@angular/core';
 import * as L from 'leaflet';
 import { icon, Marker } from 'leaflet';
 import { MarkerService } from '../_services/marker.service';
+import {LatLng} from "leaflet";
 
 const iconRetinaUrl = 'assets/marker-icon-2x.png';
 const iconUrl = 'assets/marker-icon.png';
@@ -46,5 +47,11 @@ export class MapComponent implements AfterViewInit {
     });
 
    tiles.addTo(this.map);
+
+    const latlngs = [new LatLng(48.801, 2.130),
+      new LatLng(48.801, 2.134),
+      new LatLng(48.804, 2.134),
+      new LatLng(48.804, 2.130)];
+    L.polygon(latlngs, {color: 'yellow'}).addTo(this.map);
   }
 }
