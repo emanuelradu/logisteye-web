@@ -11,6 +11,9 @@ import { MarkerService } from './_services/marker.service';
 import { HttpClientModule } from '@angular/common/http';
 import { PopUpService } from './_services/popup.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -24,6 +27,9 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     AppRoutingModule,
     MatSliderModule,
     BrowserAnimationsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
   ],
   providers: [
     MarkerService,
