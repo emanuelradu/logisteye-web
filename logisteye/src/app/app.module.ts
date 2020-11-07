@@ -6,6 +6,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 import { AppComponent } from './app.component';
 import { MarkerService } from './_services/marker.service';
@@ -30,6 +31,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     AppRoutingModule,
     MatSliderModule,
     MatCheckboxModule,
+    MatToolbarModule,
     BrowserAnimationsModule,
     MatTableModule,
     MatPaginatorModule,
