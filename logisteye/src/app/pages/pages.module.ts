@@ -8,13 +8,17 @@ import { MatSliderModule } from '@angular/material/slider';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MapComponent } from './map/map.component';
 import { ConfigurationComponent } from './configuration/configuration.component';
+import { DataTableComponent } from './data-table/data-table.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import {MatToolbarModule} from '@angular/material/toolbar';
-
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 
 @NgModule({
-  declarations: [LoginComponent, PackageListComponent, SimulationComponent, MapComponent,ConfigurationComponent],
+  declarations: [LoginComponent, PackageListComponent, SimulationComponent, MapComponent,ConfigurationComponent, DataTableComponent],
   imports: [
     CommonModule,
     BrowserModule,
@@ -22,12 +26,17 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MatCheckboxModule,
     MatToolbarModule,
     BrowserAnimationsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatFormFieldModule,
   ],
   exports: [
     LoginComponent,
     SimulationComponent,
     MapComponent,
     ConfigurationComponent,
+    DataTableComponent,
   ]
 })
 export class PagesModule { }
