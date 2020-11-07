@@ -1,15 +1,17 @@
-.footer
-{
-    background-color: blue;
-    font-family: Tahoma, Arial;
-    font-size: 0.7em;
-    color: rgb(251, 255, 0);
-    bottom: 0;
-    margin: 0;
-    position: absolute;
-    width: 100%
-}
-
 .page{
     height: 100%;
+    width: 70vw;
 }
+
+.main-screen{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+}
+
+.side-menu{
+    width: 25%;
+
+}
+
+

@@ -41,7 +41,7 @@
 }
 
 
-button {
+.button {
     background-color: #A4161A;
     font-family: 'Exo 2', sans-serif;
     border: none;
@@ -53,10 +53,11 @@ button {
     border-radius: 1000px;
     margin: 2em;
     width: 7em;
-    height:1.9em
+    height:1.6em;
+    align-content: center;
     
   }
-  button:hover{
+  .button:hover{
       background-color: #a4161bc4;
   }
 

@@ -1,0 +1,71 @@
+.side-menu{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: url("/assets/pages/packageList_sideImage.png");
+    background-repeat: no-repeat;
+    justify-content: space-between;
+    color: white;
+    font-family: 'Exo 2', sans-serif;
+}
+
+.logo{
+    width: 100%;
+}
+
+.account{
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.image{
+    width: 120px;
+    height: 120px;
+    border-radius:50%;
+    margin-bottom: 1em;
+    margin-right: 7em;
+}
+
+.account-name{
+    margin-right:7em;
+}
+
+.navmenu{
+    align-content: center;
+}
+
+
+ul{
+
+}
+
+
+li{
+    color: white;
+    text-decoration: none;
+    list-style-type: none;
+    padding: 10px 0px;
+
+}
+
+.button {
+    background-color: #A4161A;
+    font-family: 'Exo 2', sans-serif;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2em;
+    border-radius: 1000px;
+    margin: 0.5em;
+    margin-left: 2em;
+    width: 7em;
+    height:1.6em;
+    align-content: center;
+  }
+
