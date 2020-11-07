@@ -12,7 +12,7 @@ import { ConfigurationComponent } from './configuration/configuration.component'
 
 
 @NgModule({
-  declarations: [LoginComponent, PackageListComponent, SimulationComponent, MapComponent],
+  declarations: [LoginComponent, PackageListComponent, SimulationComponent, MapComponent,ConfigurationComponent],
   imports: [
     CommonModule,
     BrowserModule,
