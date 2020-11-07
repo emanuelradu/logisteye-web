@@ -12,6 +12,9 @@ import { MarkerService } from './_services/marker.service';
 import { HttpClientModule } from '@angular/common/http';
 import { PopUpService } from './_services/popup.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
@@ -28,6 +31,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatSliderModule,
     MatCheckboxModule,
     BrowserAnimationsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
     FormsModule,
     ReactiveFormsModule,
     MatFormFieldModule,
