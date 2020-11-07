@@ -33,6 +33,7 @@ export class MapComponent implements AfterViewInit {
     //this.markerService.makeCapitalMarkers(this.map);
     this.markerService.makeCapitalCircleMarkers(this.map);
     this.markerService.makeLockers(this.map);
+    this.markerService.makeHeatMap(this.map);
   }
 
   private initMap(): void {
