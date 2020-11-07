@@ -9,7 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MapComponent } from './map/map.component';
 import { ConfigurationComponent } from './configuration/configuration.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 
 @NgModule({
@@ -20,6 +20,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     MatSliderModule,
     MatCheckboxModule ,
     BrowserAnimationsModule,
+    MatFormFieldModule,
   ],
   exports: [
     LoginComponent,

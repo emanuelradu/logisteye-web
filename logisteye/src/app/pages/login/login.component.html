@@ -4,18 +4,15 @@
             <b>Authentication</b>
     </div>
    
+        <div class="username">
+            <input #email formControlName="email" class="username_fill" type="text" placeholder="  Enter Email" name="uname" required>
+        </div>
 
-    <div class="username">
-        <input class="username_fill" type="text" placeholder="  Enter Username" name="uname" required>
-    </div>
+        <div class="password">
+            <input #password formControlName="password" class="username_fill" type="password" placeholder="  Enter Password" name="psw" required>
+        </div>
 
-    <div class="password">
-        <input class="username_fill" type="password" placeholder="  Enter Password" name="psw" required>
-    </div>
-        
-
-    <a class="button" href="/package-list" routerLink="/package-list">Log In</a>
-
+    <button class="button" (click)='login(email.value, password.value)'>Log In</button>
 </div>
 <div class="bottom_image">
 

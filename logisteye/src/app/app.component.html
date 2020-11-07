@@ -1,8 +1,12 @@
-<div class="main-screen">
+<div *ngIf="currentUser" class="main-screen">
 
     <app-side-menu class="side-menu"></app-side-menu>
     <div class="page">
         <router-outlet></router-outlet>
     </div>
 
+</div>
+
+<div *ngIf="!currentUser">
+    <app-login></app-login>
 </div>
