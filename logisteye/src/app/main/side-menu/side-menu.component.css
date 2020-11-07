@@ -16,7 +16,8 @@
 }
 
 .logoimg{
-    width: 100px;
+    margin-top: 1em;
+    width: auto;
     height: 100px;
     margin-right: 7em;
 }
@@ -41,6 +42,8 @@ a{
     border-radius:50%;
     margin-bottom: 1em;
     margin-right: 7em;
+    object-fit: cover;
+    border: 4px dotted #A4161A;
 }
 
 .account-name{
@@ -51,18 +54,16 @@ a{
     align-content: center;
 }
 
-
-ul{
-
-}
-
-
-li{
+ul li{
     color: white;
     text-decoration: none;
     list-style-type: none;
     padding: 10px 0px;
     text-decoration: none;
+    width: 40%;
+}
+ul li:hover{
+    border-bottom: 2px solid #A4161A;
 
 }
 
