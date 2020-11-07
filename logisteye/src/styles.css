@@ -1,6 +1,9 @@
+@import "~leaflet/dist/leaflet.css";
+
 body{
     margin: 0;
     padding: 0;
-    background-color:#F5F3F4;
+    background-color: #F5F3F4;
+    height: 100%;
     
 }

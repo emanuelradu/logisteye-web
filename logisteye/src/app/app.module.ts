@@ -1,3 +1,7 @@
+import { AppRoutingModule } from './app-routing.module';
+import { RouterModule } from '@angular/router';
+import { PagesModule } from './pages/pages.module';
+import { MainModule } from './main/main.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -14,7 +18,10 @@ import { PopUpService } from './_services/popup.service';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    MainModule,
+    PagesModule,
+    AppRoutingModule
   ],
   providers: [
     MarkerService,
