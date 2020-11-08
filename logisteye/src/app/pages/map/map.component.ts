@@ -1,4 +1,4 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
 import * as L from 'leaflet';
 import {LatLng} from "leaflet";
 import { MarkerService } from 'src/app/_services/marker.service';
@@ -23,12 +23,24 @@ L.Marker.prototype.options.icon = iconDefault;
   templateUrl: './map.component.html',
   styleUrls: ['./map.component.scss']
 })
-export class MapComponent implements AfterViewInit {
+export class MapComponent implements AfterViewInit, OnInit {
   private map;
 
   constructor(private markerService: MarkerService) { }
 
   ngAfterViewInit(): void {
+    this.initMap();
+    this.markerService.makeLockers(this.map);
+    this.markerService.makeHeatMap(this.map);
+    this.markerService.makeBikeAreas(this.map);
+    this.markerService.makePackages(this.map);
+  }
+
+  ngOnInit(): void {
+  }
+
+  public reInitialize(){
+    this.map.remove()
     this.initMap()
     this.markerService.makeLockers(this.map);
     this.markerService.makeHeatMap(this.map);

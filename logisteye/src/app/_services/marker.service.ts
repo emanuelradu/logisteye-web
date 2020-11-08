@@ -2,6 +2,7 @@ import { PopUpService } from './popup.service';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import * as L from 'leaflet';
+import { SimulationService } from './simulation.service';
 
 @Injectable({
   providedIn: 'root'
@@ -18,11 +19,11 @@ export class MarkerService {
   packageData: string = 'assets/data/package_data.json';
 
   constructor(private http: HttpClient,
-    private popupService: PopUpService) {
+    private simulationService: SimulationService) {
   }
 
       makeLockers(map: L.map): void {
-        this.http.get(this.lockers).subscribe((res: any) => {
+        this.simulationService.loadLockers().subscribe((res: any) => {
           for (const locker of res) {
             const lat = locker.location.latitude;
             const lon = locker.location.longitude;
@@ -44,7 +45,7 @@ export class MarkerService {
     }
 
     makeBikeAreas(map: L.map): void {
-      this.http.get(this.bikeData).subscribe((res: any) => {
+      this.simulationService.loadBikes().subscribe((res: any) => {
         for (const area of res) {
           const circle = L.circle([area.location_center.latitude, area.location_center.longitude],
             {
@@ -57,7 +58,7 @@ export class MarkerService {
     }
 
     makePackages(map: L.map): void {
-      this.http.get(this.packageData).subscribe((res: any) => {
+      this.simulationService.loadPackages().subscribe((res: any) => {
         for (const pack of res) {
           const circle = L.circle([pack.destination_location.latitude, pack.destination_location.longitude], {
             radius: 0.5,

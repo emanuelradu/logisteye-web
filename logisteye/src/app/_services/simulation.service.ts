@@ -16,4 +16,20 @@ export class SimulationService {
   public loadSimulationData(params: SimulationParams): Observable<any> {
     return this.httpClient.post(this.baseUrl, params);
   }
+
+  public loadPackages(): Observable<any>{
+    let url = environment.hostUrl + 'simulation/packages/';
+    return this.httpClient.get<any>(url);
+  }
+
+  public loadLockers(): Observable<any>{
+    let url = environment.hostUrl + 'simulation/lockers/';
+    return this.httpClient.get<any>(url);
+  }
+
+  public loadBikes(): Observable<any>{
+    let url = environment.hostUrl + 'simulation/bike/';
+    return this.httpClient.get<any>(url);
+  }
+
 }
