@@ -14,6 +14,8 @@ export class MarkerService {
   locker: string = 'assets/locker.svg';
   heat: string = 'assets/data/heat.json';
   squares: string = 'assets/data/data1.json';
+  bikeData: string = 'assets/data/data_bikes.json';
+  packageData: string = 'assets/data/package_data.json';
 
   constructor(private http: HttpClient,
     private popupService: PopUpService) {
@@ -21,9 +23,9 @@ export class MarkerService {
 
       makeLockers(map: L.map): void {
         this.http.get(this.lockers).subscribe((res: any) => {
-          for (const c of res) {
-            const lat = c.lat;
-            const lon = c.long;
+          for (const locker of res) {
+            const lat = locker.location.latitude;
+            const lon = locker.location.longitude;
             const addImage = L.imageOverlay(this.locker, [[lat, lon], [lat - 0.001, lon + 0.001]]).addTo(map);
           }
         });
@@ -39,5 +41,29 @@ export class MarkerService {
           L.polygon(latlngs, {color: c.color, weight: 0.1}).addTo(map);
           }
         });
+    }
+
+    makeBikeAreas(map: L.map): void {
+      this.http.get(this.bikeData).subscribe((res: any) => {
+        for (const area of res) {
+          const circle = L.circle([area.location_center.latitude, area.location_center.longitude],
+            {
+              radius: 1000 * area.radius,
+              color: 'cyan'
+            }
+          ).addTo(map);
+        }
+      });
+    }
+
+    makePackages(map: L.map): void {
+      this.http.get(this.packageData).subscribe((res: any) => {
+        for (const pack of res) {
+          const circle = L.circle([pack.destination_location.latitude, pack.destination_location.longitude], {
+            radius: 0.5,
+            color: 'brown'
+          }).addTo(map);
+        }
+      });
     }
   }
