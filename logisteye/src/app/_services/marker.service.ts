@@ -62,7 +62,7 @@ export class MarkerService {
         for (const pack of res) {
           const circle = L.circle([pack.destination_location.latitude, pack.destination_location.longitude], {
             radius: 0.5,
-            color: 'brown'
+            color: 'white'
           }).addTo(map);
         }
       });
