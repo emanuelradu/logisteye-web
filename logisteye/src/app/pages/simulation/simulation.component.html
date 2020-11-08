@@ -37,18 +37,22 @@
                     </div>
                 </div>
             </div>
-            
             <div class="results-container">
                 <div class = "time">
-                    <h1 class="mat-h1">Required time to deliver all the packages</h1>
+                    <h1 class="mat-h1">Required time to deliver all the packages: {{ time }} minutes</h1>
                 </div>
                 <div class = "co2">
-                    <h1 class="mat-h1">Amount of CO2 emissions reduced</h1>
+                    <h1 class="mat-h1">Amount of CO2 emissions reduced: {{ co2 }} Kg</h1>
                 </div>
 
             </div>
 
     
+    </div>
+
+    <div *ngIf="loader" class=spinner>
+        <mat-spinner></mat-spinner> 
+        <span>This may take a while</span>
     </div>
 
     <div class = "map-container">

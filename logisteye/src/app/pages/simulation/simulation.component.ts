@@ -10,6 +10,9 @@ import {SimulationService} from "../../_services/simulation.service";
 })
 
 export class SimulationComponent implements OnInit {
+  public co2: string = '';
+  public time: number = 0;
+  loader = false;
   checked = false;
   simParams: SimulationParams = {
     lockers: null,
@@ -39,9 +42,12 @@ export class SimulationComponent implements OnInit {
 
   public sendSimulationRequest(event){
     console.log(this.simParams)
+    this.loader = true;
     this.simulationService.loadSimulationData(this.simParams).subscribe(r => {
       console.log("Simulation request completed!")
+      this.co2 = (Math.round(r.co2 * 100) / 100).toFixed(2);
+      this.time = r.time;
+      this.loader = false;
     });
   }
-
 }

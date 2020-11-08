@@ -8,7 +8,7 @@ import {Observable} from "rxjs";
   providedIn: 'root'
 })
 export class SimulationService {
-  baseUrl = environment.apiUrl + '/simulation/'
+  baseUrl = environment.hostUrl + 'simulation/';
 
   constructor(private httpClient: HttpClient) {
   }

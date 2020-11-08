@@ -15,7 +15,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatFormFieldModule } from '@angular/material/form-field';
-
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [LoginComponent, PackageListComponent, SimulationComponent, MapComponent,ConfigurationComponent, DataTableComponent],
@@ -30,6 +30,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatPaginatorModule,
     MatSortModule,
     MatFormFieldModule,
+    MatProgressSpinnerModule
   ],
   exports: [
     LoginComponent,
