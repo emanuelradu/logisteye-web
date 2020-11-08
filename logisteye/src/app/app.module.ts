@@ -18,6 +18,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import {SimulationService} from "./_services/simulation.service";
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
   ],
   providers: [
     MarkerService,
-    PopUpService
+    PopUpService,
+    SimulationService
   ],
   bootstrap: [AppComponent]
 })

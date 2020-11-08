@@ -1,6 +1,7 @@
 import { SimulationParams } from './../models/simulation-params';
 import { SimulationResult } from './../models/simulation-result';
 import { Component, OnInit } from '@angular/core';
+import {SimulationService} from "../../_services/simulation.service";
 
 @Component({
   selector: 'app-simulation',
@@ -19,7 +20,7 @@ export class SimulationComponent implements OnInit {
     time: null,
     co2: null,
   }
-  constructor() { }
+  constructor(private simulationService: SimulationService) { }
   ngOnInit(): void {
   }
 
@@ -37,9 +38,10 @@ export class SimulationComponent implements OnInit {
   }
 
   public sendSimulationRequest(event){
-    console.log(this.simResult);
+    console.log(this.simParams)
+    this.simulationService.loadSimulationData(this.simParams).subscribe(r => {
+      console.log("Simulation request completed!")
+    });
   }
-
-
 
 }
